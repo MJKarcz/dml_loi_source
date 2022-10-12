@@ -75,8 +75,9 @@ class Item:
 
     def calculate_price(self) -> float:
         # remember that instance can have its own copy of a global attribute, that is why you don't call Item.pay_rate
-        return self.__price * self.pay_rate
-
+        new_price = self.__price * self.pay_rate
+        print(f'New price: {new_price}')
+        return new_price
 
 if __name__ == "__main__":
     print(f'{__name__} script running.')
